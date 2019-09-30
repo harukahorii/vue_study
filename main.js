@@ -3,7 +3,6 @@
 var app = new Vue({
   el: '#app',
   data: {
-    name: 'キマイラ',
     list: [
       { id: 1, name: 'スライム', hp: 100 },
       { id: 2, name: 'ゴブリン', hp: 200 },
@@ -11,18 +10,9 @@ var app = new Vue({
     ]
   },
   methods: {
-    // 追加ボタンをクリックしたときのハンドラ
-    doAdd: function() {
-      // リスト内で１番大きいIDを取得
-      var max = this.list.reduce(function (a, b){
-        return a > b.id ? a : b.id
-      }, 0)
-      // 新しいモンスターをリストに追加
-      this.list.push({
-        id: max + 1, /* 現在の最大のIDに+1してユニークなIDを作成*/
-        name: this.name, /* 現在のフォーム入力値*/
-        hp: 500
-      })
-    }
+   doRemove: function (index) {
+    this.list.splice(index,1)
+   }
+  
   }
 })
