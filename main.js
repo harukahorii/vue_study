@@ -1,16 +1,13 @@
-// まずはv-onデレクティブを使用して、ボタンがクリックされるとincrement
-// という名前のメソッドが呼び出されるようにします。
-// incrementメソッドをmethodsオプションに定義して、dataオプションに
-// 登録されているcountプロパティを「1」増やす処理を行います
+// クラスとスタイル属性へのデータバインディングは、オブジェクトや配列を
+// バインドするとクラス名やCSSプロパティとして展開されます。
+
 var app = new Vue({
   el: '#app',
   data: {
-    count: 0
-  },
-  methods: {
-    increment: function() {
-      this.count += 1
-    }
+    isChild: true,
+    isActive: true,
+    textColor: 'red',
+    bgColor: 'lightgray'
   }
   
 })
