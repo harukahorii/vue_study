@@ -1,16 +1,14 @@
-// 2.p63
 
-
+// 複数の属性のデータバインディング
 var app = new Vue({
   el: '#app',
   data: {
-    classObject: {
-      child: true,
-      'is-active': false
-    },
-    styleObject: {
-      color: 'red',
-      backgroundColor: 'lightgray'
+    item: {
+      id: 1,
+      src: 'item1.jpg',
+      alt: '商品サムネイル',
+      width: 200,
+      height: 200
     }
   }
   
