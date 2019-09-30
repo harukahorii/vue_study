@@ -6,23 +6,10 @@
 </head>
 <body>
   <div id="app">
-    <!-- この#appの内側にテンプレートを書き込んでいく -->
-    <!-- <p>{{ state }}</p> -->
-    <!-- <input v-model="message"> -->
-    <!-- <ol>
-      <li v-for="item in list">{{ item }}</li>
-    </ol> -->
-    <!-- <button v-on:click="handleClick">Click</button> -->
-    <!-- <button v-on:click="show=!show">切り替え</button> -->
-    <!-- <p v-if="show">Hello Vue.js!</p> -->
-    <!-- <transition>
-      <p v-if="show">Hello Vue.js!</p>
-    </transition> -->
-    <!-- プロパティを組み合わせて使用 -->
-    <p>{{ message.value }}</p>
-    <p>{{ message.value.length }}</p>
-    <p>{{ list[2] }}</p>
-    <p>{{ list[num] }}</p>
+    <!-- DOMのtextContentプロパティにバインド -->
+    <div v-bind:text-content.prop="message"></div>
+    <!-- DOMのscrollTopプロパティにバインド -->
+    <div v-bind:scroll-top.prop="scroll"></div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
