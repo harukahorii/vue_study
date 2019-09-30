@@ -10,9 +10,9 @@ var app = new Vue({
     ]
   },
   methods: {
-   doRemove: function (index) {
-    this.list.splice(index,1)
+   doRemove: function() {
+    this.$set(this.list, 0, { id: 1, name: 'キングスライム', hp: 500 })
    }
   
-  }
+    }
 })
