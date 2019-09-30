@@ -6,8 +6,15 @@
 </head>
 <body>
   <div id="app">
-    <div v-if="ok">v-if条件による描画</div>
-    <div v-show="ok">v-show条件による表示</div>
+    <ul>
+      <li v-for="item in list"
+        v-bind:key="item.id"
+        v-bind:class="{ tuyoi: item.hp > 300}">
+        ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+        <span v-if="item.hp > 300">つよい</span>
+
+      </li>
+    </ul>
 
 
     
