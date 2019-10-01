@@ -9,10 +9,11 @@ var app = new Vue({
       { id: 3, name: 'ドラゴン', hp: 500 }
     ]
   },
-  methods: {
-   doRemove: function() {
-    this.$set(this.list, 0, { id: 1, name: 'キングスライム', hp: 500 })
-   }
-  
-    }
+  created: function() {
+    // すべての要素にactiveプロパティを追加したい
+    this.list.forEach(function(item) {
+      this.$set(item, 'active', false)
+      // 「item.active = false」ではリアクティブにならない
+    }, this)
+  }
 })
