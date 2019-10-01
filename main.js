@@ -1,18 +1,14 @@
-// 要素を繰返し描写する
-
 var app = new Vue({
   el: '#app',
   data: {
-    list: [
-      { id: 1, name: 'スライム', hp: 100 },
-      { id: 2, name: 'ゴブリン', hp: 200 },
-      { id: 3, name: 'ドラゴン', hp: 500 }
-    ]
+  
+    list: []
   },
-  methods: {
-    // ボタンのクリックイベントのハンドラ
-    doAttack: function(index) {
-      this.list[index].hp -= 10
-    }
+  created: function() {
+    axios.get('https://api.myjson.com/bins/1fwqkt').then(function(response){
+      this.list = response.data
+    }.bind(this)).catch(function(e) {
+      console.error(e)
+    })
   }
 })
