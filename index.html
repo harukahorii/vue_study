@@ -8,10 +8,11 @@
   <div id="app">
     
     <ul>
-      <li v-for="item in list" v-bind:key="item.id">
+      <li v-for="(item, index) in list" v-bind:key="item.id" v-if="item.hp">
         ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
-        <!-- 削除ボタン -->
-        <!-- <button v-on:click="doRemove">モンスターを削除</button> -->
+        <span v-if="item.hp < 50">瀕死！</span>
+        <!-- ボタンはv-for内に作成 -->
+        <button v-on:click="doAttack(index)">モンスターを削除</button>
       </li>
     </ul>
 
