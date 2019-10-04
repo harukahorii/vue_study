@@ -6,7 +6,8 @@
 </head>
 <body>
   <div id="app">
-    <button @click="handleClick">クリック</button>
+    <button v-on:click="handleClick">クリック</button>
+    <img src="item1.jpg" v-on:load="show=true" v-bind:class="{hide: !show}">
     
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
