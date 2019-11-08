@@ -4,8 +4,10 @@ var app = new Vue({
     width: 800
   },
   computed: {
-    halfWidth: function() {
-      return this.width / 2
+    halfWidth: {
+      get: function() { return this.width / 2 },
+      // halfWidthの2倍の数値をwidthに入れる
+      set: function(val) { this.width = val * 2 }, 
     }
   }
 })
