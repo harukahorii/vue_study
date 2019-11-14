@@ -21,9 +21,13 @@ var app = new Vue({
         return el.price <= this.budget
       }, this)
     },
-    // matchedで返ったデータをlimit件返すプロパティ
+    sorted: function() {
+      // sortedを追加
+      return _.orderBy(this.matched, 'price', this.order ? 'desc':'asc')
+    },
+    // リストをsortedに変更
     limited: function() {
-      return this.matched.slice(0, this.limit)
+      return this.sorted.slice(0, this.limit)
     }
   }
 })
