@@ -8,14 +8,15 @@
   <div id="app">
     <input v-model.number="budget">円以下に絞り込む
     <input v-model.number="limit">件を表示
+    <button v-on:click="order=!order">切り替え</button>
     <p>{{ matched.length }}件中{{ limited.length }}件を表示</p>
     <ul>
       <!-- v-forでは最終結果、算出プロパティのlimtedを使用する -->
-      <li v-for="item in limited" v-bind:key="limited.id">
+      <li v-for="item in limited" v-bind:key="item.id">
         {{ item.name }} {{ item.price }}円
       </li>
     </ul>
-    <button v-on:click="order=!order">切り替え</button>
+    
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
