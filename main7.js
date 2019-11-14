@@ -24,10 +24,6 @@ var app = new Vue({
     // matchedで返ったデータをlimit件返すプロパティ
     limited: function() {
       return this.matched.slice(0, this.limit)
-    },
-    filteredList: function() {
-      // 変更があればテンプレートではなくこっちを修正
-      return this.limited
     }
   }
 })
