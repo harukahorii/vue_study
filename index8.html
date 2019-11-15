@@ -7,7 +7,7 @@
 <body>
   <div id="app">
     <select v-model="current">
-      <option v-for="tpic in topics" v-bind:value="topic.value">
+      <option v-for="topic in topics" v-bind:value="topic.value">
         {{ topic.name }}
       </option>
     </select>
