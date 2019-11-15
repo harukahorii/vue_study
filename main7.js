@@ -1,6 +1,7 @@
 var app = new Vue({
   el: '#app',
   data: {
+    order: false,
   // フォーム入力と紐付けるデータ
     budget: 300,
     // 表示数
@@ -28,6 +29,9 @@ var app = new Vue({
     // リストをsortedに変更
     limited: function() {
       return this.sorted.slice(0, this.limit)
+    },
+    filteredList() {
+      return this.limited
     }
   }
 })
