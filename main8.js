@@ -1,21 +1,20 @@
 var app = new Vue({
   el: '#app',
   data: {
-    list: [],
-    current: '',
-    topics: [
-      { value: 'vue', name: 'Vue.js' },
-      { value: 'jQuery', name: 'jQuery' }
+    edited: false,
+    list: [
+      { id: 1, name: 'りんご', price: 100 },
+      { id: 2, name: 'ばなな', price: 200 },
     ]
   },
-  watch: {
-    current: function(val) {
-      // GithubのAPIからトピックのレポジトリを検索
-      axios.get('https://api.github.com/search/repositories',{
-        params: { q: 'topic' + val }
-      }).then(function(response) {
-        this.list = response.data.items
-      }.bind(this))
-    }
-  },
+  created: finction() {
+    var unwatch = this.$watch('list', function() {
+      // listが編集されたことを記録する
+      this.edited = true
+      // 監視を解除
+      unwatch()
+    }, {
+      deep: true
+    })
+  }
 })
