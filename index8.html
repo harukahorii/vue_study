@@ -6,10 +6,7 @@
 </head>
 <body>
   <div id="app">
-    <select v-model="current">
-      <option v-for="topic in topics" v-bind:value="topic.value">
-        {{ topic.name }}
-      </option>
+    <input type="text" v-model="value">
     </select>
     <div v-for="item in list">{{ item.full_name }}</div>
   </div>
