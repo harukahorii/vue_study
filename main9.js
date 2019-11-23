@@ -1,11 +1,11 @@
-var app = new Vue({
+new Vue({
   el: '#app',
   data: {
     price: 19800
   },
   filters: {
     localeNum: function(val) {
-      return val.toLocalString()
+      return val.toLocaleString()
     }
   }
 })
