@@ -1,3 +1,3 @@
 Vue.component('my-component', {
-  tenplate: '<p>MyComponent</p>'
+  template: '<p>MyComponent</p>'
 })
