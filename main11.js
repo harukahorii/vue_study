@@ -1,3 +1,9 @@
-Vue.component('my-component', {
-  tenplate: '<p>MyComponent</p>'
+var myComponent = {
+  template: '<p>MyComponent</p>'
+}
+new Vue({
+  el: '#app',
+  components : {
+    'my-component': myComponent
+  }
 })
