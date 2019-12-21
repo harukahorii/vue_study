@@ -4,8 +4,5 @@ Vue.component('my-component', {
     return {
       message: 'Hello Vue.js'
     }
-  },
-  methods: {
-    
   }
 })
