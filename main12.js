@@ -1,10 +1,10 @@
-var myComponent = {
-  template: '<p>MyComponent</p>'
-}
-
-new VTTCue({
-  el: '#app',
-  components: {
-    'my-component': myComponent
+Vue.component('my-component', {
+  template: '<p>{{ message }}</p>',
+  data: function() {
+    return {
+      message: 'Hello Vue.js'
+    }
   }
 })
+
+new Vue({ el: '#app' })

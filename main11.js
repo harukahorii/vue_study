@@ -4,3 +4,5 @@ Vue.component('comp-child', {
   // 受け取る属性名を指定
   props: ['val']
 })
+
+new Vue({ el: '#app' })
