@@ -1,5 +1,10 @@
 Vue.component('my-component', {
-  template: '<p>MyComponent</p>'
+  template: '<p>{{ message }}</p>',
+  data: function() {
+    return {
+      message: 'Hello Vue.js'
+    }
+  }
 })
 
 new Vue({ el: '#app' })
