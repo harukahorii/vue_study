@@ -1,10 +1,5 @@
-Vue.component('my-component', {
-  template: '<p>{{ message }}</p>',
-  data: function() {
-    return {
-      message: 'Hello Vue.js'
-    }
-  }
+Vue.component('comp-child', {
+  template: '<p id="child" class="child">ChildComponent</p>'
 })
 
 new Vue({ el: '#app' })
