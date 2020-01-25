@@ -1,7 +1,8 @@
 Vue.component('comp-child', {
   template: '<button v-on:click="handleClick">イベント発火</button>',
-  mrthods: {
-    handleClick: function() {
+  methods: {
+    // ボタンのクリックイベントのハンドラでchilds-eventを発火する
+    handleClick: function () {
       this.$emit('childs-event')
     }
   }
@@ -10,7 +11,9 @@ Vue.component('comp-child', {
 new Vue({
   el: '#app',
   methods: {
-    praaarentsMethod: function() {
-      alert('イベントをキャッ')
+    // childs-eventが発生した！
+    parentsMethod: function () {
+      alert('イベントをキャッチ！ ')
     }
-  } })
+  }
+})
