@@ -6,7 +6,10 @@
 </head>
 <body>
   <div id="app">
-    <example v-bind:value="value"></example>
+    <ul>
+      <comp-child v-for="item in list" v-bind:key="item.id" v-bind="item" v-on:attack="handleAttack"></comp-child>
+    </ul>
+    
   </div>
   
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
