@@ -5,10 +5,11 @@
   <link href="main.css" rel="stylesheet">
 </head>
 <body>
-  <div id="app">
-  
-    
-  </div>
+    <comp-child>実はここがスロットコンテンツ</comp-child>
+    <div class="comp-child">
+      ここにスロットを埋め込む → <slot></slot>
+    </div>
+    <!-- <comp-child>{{ message }}</comp-child> -->
   
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
