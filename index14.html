@@ -6,16 +6,9 @@
 </head>
 <body>
   <div id="app">
-    <child-slot-comp>{{message}}</child-slot-comp>
+    <my-calendar v-model="date"></my-calendar>
   </div>
-  <!-- <comp-child>
-    実はここがスロットコンテンツ
-  </comp-child>
-
-  <div class="comp-child">
-    ここにスロットを埋め込む → <slot></slot>
-  </div> -->
-  
+ 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
