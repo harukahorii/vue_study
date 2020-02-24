@@ -3,14 +3,7 @@
   <meta charset="utf-8">
   <title>Vue.js App</title>
   <link href="main.css" rel="stylesheet">
-  <style>
-    .v-center, .v-leave-active {
-      transition: opacity 1s ;
-    }
-    .v-center, .v-leave-to {
-      opacity: 0;
-    }
-  </style>
+  
 </head>
 <body>
   <!-- <div id="app">
@@ -20,6 +13,15 @@
   <transition>
     <div v-show="show">トランジョンさせたい要素</div>
   </transition>
+
+  <style>
+    .v-center, .v-leave-active {
+      transition: opacity 1s ;
+    }
+    .v-center, .v-leave-to {
+      opacity: 0;
+    }
+  </style>
 
  
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
